@@ -2,13 +2,12 @@
 # -*- coding: utf-8 -*-
 
 import json
-import subprocess
+import pathlib
 
 
 class JSONReader:
     def __init__(self, table_name: str = '', file_path: str = '/data'):
-        p = subprocess.Popen(["pwd"], stdout=subprocess.PIPE)
-        path = p.communicate()[0].decode("utf-8").replace('\n', '')
+        path = str(pathlib.Path().resolve())
         self.table_name = table_name
         self.file_path = f"{path}{file_path}/{table_name}.json"
 

@@ -17,4 +17,7 @@ if __name__ == '__main__':
     table_name = 'fotografia'
     json_data = read_json.JSONReader(table_name).get_json_data()
 
-    event_hub(conn_str, event_name, event_group, json_data)
+    from time import sleep
+    while True:
+        event_hub(conn_str, event_name, event_group, json_data)
+        sleep(30)
