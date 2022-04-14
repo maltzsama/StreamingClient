@@ -5,7 +5,7 @@ from azure.eventhub import EventHubProducerClient
 from azure.eventhub import EventData
 
 
-class MessageSender:
+class EventHubSender:
     def __init__(self, conn_str: str = '', name: str = '', group: str = '$Default'):
         self.conn_str = conn_str
         self.name = name

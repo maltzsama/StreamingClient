@@ -1,0 +1,11 @@
+azure-core==1.23.1
+azure-eventhub==5.7.0
+certifi==2021.10.8
+charset-normalizer==2.0.12
+idna==3.3
+kafka-python==2.0.2
+requests==2.27.1
+six==1.16.0
+typing_extensions==4.1.1
+uamqp==1.5.3
+urllib3==1.26.9

@@ -17,8 +17,9 @@ class ConfigReader:
         return conn_str, event_name, group
 
     def get_kafka(self) -> tuple:
-        broadcast = self.config.get('kafka', 'broadcast')
-        return broadcast
+        bootstrap = self.config.get('kafka', 'bootstrap')
+        topic = self.config.get('kafka', 'topic')
+        return bootstrap, topic
 
     def get_kinesis(self) -> tuple:
         conn_str = self.config.get('kinesis', 'conn_str')
